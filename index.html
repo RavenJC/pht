@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PHTV HUB</title>
+<link rel="icon" type="image/png" href="phtv-hub.png">
+<script src="https://fle-rvd0i9o8-moo.com/player/jw8_26/jwplayer.js"></script>
+<script>jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo";</script>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <div class="video-container">
+            <div id="clock"></div>
+            <div id="player"></div>
+            <div id="fallbackMessage">
+                <div class="fallback-content">
+                    <div class="loading-spinner"></div>
+                    <h3>Loading Channel...</h3>
+                    <p>Please wait while we connect to the stream</p>
+                </div>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="top-controls">
+                <div class="brand-header">
+                    <div class="brand-logo">
+                        <span class="logo-icon">📺</span>
+                        <div class="brand-text">PHTV HUB</div>
+                    </div>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="themeSwitch"/>
+                        <label for="themeSwitch" class="toggle-slider">
+                            <span class="toggle-icon sun">☀️</span>
+                            <span class="toggle-icon moon">🌙</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="stats-row">
+                    <div id="channelCount" class="channel-count"></div>
+                    <div id="connectionStatus" class="connection-status">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">Online</span>
+                    </div>
+                </div>
+                
+                <select id="categoryFilter" onchange="setupChannelList()">
+                    <option value="all">🌐 All Channels</option>
+                </select>
+            </div>
+    
+            <div class="list-container">
+                <ul class="channel-list" id="channelList"></ul>
+            </div>
+            
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input
+                        class="search-input"
+                        type="search"
+                        placeholder="Search channels..."
+                        oninput="setupChannelList()"
+                        id="searchInput"
+                    />
+                    <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+<script src="script.js"></script>
+<script src="channel.js"></script>
+</body>
+</html>
