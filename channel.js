@@ -1264,4 +1264,10 @@ const channels = [
         type: 'hls',
         url: 'https://amg17931-zee-amg17931c9-samsung-ph-6528.playouts.now.amagi.tv/playlist/amg17931-asiatvusaltdfast-zeesine-samsungph/playlist.m3u8',
     },
+        {
+        name: 'Pacquiao',
+        category: 'PACQUIAO',
+        type: 'hls',
+        url: 'https://raw.githubusercontent.com/RavenJC/pacs1/refs/heads/main/stream1.m3u8',
+    },
 ]
